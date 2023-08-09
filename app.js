@@ -466,18 +466,19 @@ WHERE REFRENCE_ID='${UserName}' ;`,(err,result)=>{
     res.json(result)
 })
 })
-122
-// app.get("/getuserdata/:UserName",(req,res)=>{
-//   let UserName = req.params.UserName;
-//   connection.query(`SELECT * FROM TOWERS_Prod.tudatowers_sold_flats_details_table WHERE REFRENCE_ID='${UserName}'`,(err,result)=>{
-//     if(err){
-//       console.log("Error :",err);
-//       return false;
-//     }else{
-//       res.json(result);
-//     }
-//   })
-// })
+// 122
+
+app.get("/getuserdata/:UserName",(req,res)=>{
+  let UserName = req.params.UserName;
+  connection.query(`SELECT * FROM TOWERS_Prod.tudatowers_sold_flats_details_table WHERE REFRENCE_ID='${UserName}'`,(err,result)=>{
+    if(err){
+      console.log("Error :",err);
+      return false;
+    }else{
+      res.json(result);
+    }
+  })
+})
 
 
 
